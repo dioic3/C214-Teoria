@@ -5,7 +5,6 @@ public class Professor {
     private String horarioDeAtendimento;
     private String periodo;
     private int sala;
-    private int[] predio = {1,2,3,4,5,6};
     private int predioEscolhido;
 
     public Professor(String nomeDoProfessor, String horarioDeAtendimento, String periodo, int sala) {
@@ -39,27 +38,30 @@ public class Professor {
         this.periodo = periodo;
     }
 
-    public int getSala() {
+    public int getSala(){
+        return sala;
+    }
+    public int getPredioEscolhido(int sala) {
         if(sala >= 1 && sala <= 5){
-            predioEscolhido = predio[0];
+            predioEscolhido = 1;
         }
         else if(sala >= 6 && sala <= 10){
-            predioEscolhido = predio[1];
+            predioEscolhido = 2;
         }
         else if(sala >= 11 && sala <= 15){
-            predioEscolhido = predio[2];
+            predioEscolhido = 3;
         } else if (sala >= 16 && sala <= 20) {
-            predioEscolhido = predio[3];
+            predioEscolhido = 4;
         }
         else if(sala >= 21 && sala <= 25){
-            predioEscolhido = predio[4];
+            predioEscolhido = 5;
         } else if (sala >= 26 && sala <= 30) {
-            predioEscolhido = predio[5];
+            predioEscolhido = 6;
         }
         else {
-            System.out.println("As salas são do número 1 até 30. Por favor, selecione uma opção dentro da faixa de número apresentado.");
+            System.out.println("Escolha um número de sala entre 1 a 30.");
         }
-        return sala;
+        return predioEscolhido;
     }
 
     public void setSala(int sala) {

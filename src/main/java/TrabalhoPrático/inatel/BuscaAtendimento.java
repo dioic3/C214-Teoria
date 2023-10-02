@@ -14,15 +14,10 @@ public class BuscaAtendimento {
         String AtendimentoJson = serviçoDeAtendimento.InformaçõesAtendimento(nomeDoProfessor);
         JsonObject jsonObject = JsonParser.parseString(AtendimentoJson).getAsJsonObject();
 
-        // Obtenha o vetor "predio" como um array de inteiros
-        int[] predioArray = new Gson().fromJson(jsonObject.get("predio").getAsJsonArray(), int[].class);
-
-
         return new Professor(jsonObject.get("nomeDoProfessor").getAsString(),
-                jsonObject.get("horárioDeAtendimento").getAsString(),
+                jsonObject.get("horarioDeAtendimento").getAsString(),
                 jsonObject.get("periodo").getAsString(),
-                jsonObject.get("sala").getAsInt()
-        );
+                jsonObject.get("sala").getAsInt());
     }
 
     public boolean atendimentoExistente(String nomeDoProfessor){
