@@ -1,6 +1,6 @@
 package aula7.TesteMock;
 
-public abstract class InimigoService {
-    public abstract String busca(int id);
-    public abstract boolean inimigoExistente(int id);
+public interface InimigoService {
+    public String busca(int id);
+    public boolean inimigoExistente(int id);
 }
