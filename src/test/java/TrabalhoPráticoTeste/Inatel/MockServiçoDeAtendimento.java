@@ -21,14 +21,15 @@ public class MockServiçoDeAtendimento implements ServiçoDeAtendimento {
         } else if (nomeDoProfessor == "Usuário Inválido") {
             return ProfessorJson.INVALIDO;
         }
-        else {
+        else if(nomeDoProfessor == "Inexistente"){
             return ProfessorJson.INEXISTENTE;
         }
+        return nomeDoProfessor;
     }
 
     @Override
     public boolean atendimentoExistente(String nomeDoProfessor) {
-        ArrayList<String> listaDeProfessor = new ArrayList<>();
+        ArrayList<String> listaDeProfessor = new ArrayList<String>();
         listaDeProfessor.add("Usuário Inválido");
         listaDeProfessor.add("Pedro");
         listaDeProfessor.add("José");
@@ -36,12 +37,9 @@ public class MockServiçoDeAtendimento implements ServiçoDeAtendimento {
         listaDeProfessor.add("Julia");
         listaDeProfessor.add("Joyce");
 
-        for (int i = 0; i < listaDeProfessor.size(); i++){
-            if (listaDeProfessor.get(i).equals(nomeDoProfessor) || listaDeProfessor.get(i).equals(nomeDoProfessor)){
+        for (int i = 0; i < listaDeProfessor.size(); i++) {
+            if (listaDeProfessor.get(i).equals(nomeDoProfessor)) {
                 return true;
-            }
-            else {
-                return false;
             }
         }
         return false;

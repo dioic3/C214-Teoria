@@ -27,7 +27,7 @@ public class ProfessorJson {
                     "\"horarioDeAtendimento\": \"17h\", \n" +
                     "\"periodo\": \"Integral\",  \n" +
                     "\"sala\": 30, \n" +
-                    "\"predio\":[\"3\"]}";
+                    "\"predio\":[\"6\"]}";
 
     public static String PEDRO =
             "{\"nomeDoProfessor\": \"Pedro\", \n" +
@@ -40,14 +40,14 @@ public class ProfessorJson {
             "{\"nomeDoProfessor\": \"Usuário Inválido\", \n" +
                     "\"horarioDeAtendimento\": \"null\", \n" +
                     "\"periodo\": \"null\",  \n" +
-                    "\"sala\": null, \n" +
-                    "\"predio\":null}";
+                    "\"sala\": 0, \n" +
+                    "\"predio\":0}";
 
     public static String INEXISTENTE =
             "{\"nomeDoProfessor\": \"Não existe\", \n" +
                     "\"horarioDeAtendimento\": \"null\", \n" +
                     "\"periodo\": \"null\",  \n" +
-                    "\"sala\": null, \n" +
-                    "\"predio\":0 }";
+                    "\"sala\":0, \n" +
+                    "\"predio\":0}";
 
 }

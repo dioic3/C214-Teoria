@@ -1,3 +1,5 @@
+package PilhaTeste;
+
 import aula6TesteDeUnidade.Pilha;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
