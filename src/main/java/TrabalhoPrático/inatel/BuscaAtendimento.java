@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class BuscaAtendimento {
-    ServiçoDeAtendimento  serviçoDeAtendimento;
+    ServiçoDeAtendimento serviçoDeAtendimento;
 
     public BuscaAtendimento(ServiçoDeAtendimento serviçoDeAtendimento){
         this.serviçoDeAtendimento = serviçoDeAtendimento;
@@ -17,7 +17,8 @@ public class BuscaAtendimento {
         return new Professor(jsonObject.get("nomeDoProfessor").getAsString(),
                 jsonObject.get("horarioDeAtendimento").getAsString(),
                 jsonObject.get("periodo").getAsString(),
-                jsonObject.get("sala").getAsInt());
+                jsonObject.get("sala").getAsInt(),
+                jsonObject.get("predio").getAsInt());
     }
 
     public boolean atendimentoExistente(String nomeDoProfessor){

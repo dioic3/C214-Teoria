@@ -26,6 +26,6 @@ public class TesteBuscaAtendimento {
         assertEquals("18h", Joyce.getHorarioDeAtendimento());
         assertEquals("Noturno", Joyce.getPeriodo());
         assertEquals(1, Joyce.getSala());
-        assertEquals(1, Joyce.getPredioEscolhido(Joyce.getSala()));
+        assertEquals(1, Joyce.getPredioEscolhido());
     }
 }
