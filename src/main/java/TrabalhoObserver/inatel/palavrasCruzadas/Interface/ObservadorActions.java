@@ -1,7 +1,7 @@
-package TrabalhoObserver.inatel.palavrasCruzadas.Observador;
-
+package TrabalhoObserver.inatel.palavrasCruzadas.Interface;
+import TrabalhoObserver.inatel.palavrasCruzadas.Observador.Observador;
 public interface ObservadorActions {
-    void addObservador(Observer observer);
-    void removeObservador(Observer observer);
+    void addObservador(Observador observer);
+    void removeObservador(Observador observer);
     void notification();
 }
